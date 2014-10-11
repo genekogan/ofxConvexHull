@@ -1,7 +1,5 @@
-# ofxPointInPolyline
+# ofxConvexHull
 
-This is a simple openFrameworks addon for determining if a given ofPoint lies inside a polygon (specified by an ofPolyline). polygons can be convex/concave, and have any number of vertices. See included example. Usage is simple:
+Convex hull implementation for OpenFrameworks based on [Rick Companje's gist](https://gist.github.com/companje/10677337), which in turn is based on [Greg Borenstein's Proccessing implementation](https://github.com/atduskgreg/Processing-Convex-Hull). simple usage:
 
-	bool isInside(ofPolyline poly, ofPoint p);
-	
-Code is adapted from [this link](http://www.geeksforgeeks.org/how-to-check-if-a-given-point-lies-inside-a-polygon/).
+	vector<ofPoint> getConvexHull(vector<ofPoint> points);
