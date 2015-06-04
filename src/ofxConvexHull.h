@@ -14,7 +14,8 @@ class ofxConvexHull
 {
 public:
     vector<ofPoint> getConvexHull(vector<ofPoint> points);
-
+    float getArea(vector<ofPoint> & hull);
+    
 private:
     
     static bool lexicalComparison(const ofPoint& v1, const ofPoint& v2);

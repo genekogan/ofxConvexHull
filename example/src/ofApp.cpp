@@ -26,6 +26,10 @@ void ofApp::draw(){
         ofVertex(hull[i]);
     }
     ofEndShape();
+    
+    // get area of convex hull
+    float area = convexHull.getArea(hull);
+    ofDrawBitmapString("area = "+ofToString(area), 5, 20);
 }
 
 //--------------------------------------------------------------
@@ -48,12 +52,12 @@ void ofApp::mouseMoved(int x, int y ){
 
 //--------------------------------------------------------------
 void ofApp::mouseDragged(int x, int y, int button){
-    points.push_back(ofPoint(x,y));
+    
 }
 
 //--------------------------------------------------------------
 void ofApp::mousePressed(int x, int y, int button){
-
+    points.push_back(ofPoint(x,y));
 }
 
 //--------------------------------------------------------------
