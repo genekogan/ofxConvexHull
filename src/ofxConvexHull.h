@@ -10,6 +10,8 @@
 #include "ofPoint.h"
 #include "ofLog.h"
 
+using std::vector;
+
 class ofxConvexHull
 {
 public:
